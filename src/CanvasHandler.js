@@ -42,7 +42,7 @@ export class CanvasHandler {
       }
   
       drawCTA(text, x, y, options) {
-          if (text == null || text == "") return;
+          if (text === null || text === "") return;
           const { textColor, bgColor, fontSize = 30, wrapLength = 20, padding = 10, cornerRadius = 10 } = options;
       
           // Split text into lines based on wrapLength
@@ -66,7 +66,7 @@ export class CanvasHandler {
       
           // Measure text width and height
           const textMetrics = ctx.measureText(lines[0]);
-          const textHeight = textMetrics.actualBoundingBoxAscent;
+         
           const textWidth = textMetrics.width;
       
           // Calculate the dimensions of the rectangle
